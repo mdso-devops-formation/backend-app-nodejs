@@ -3,9 +3,9 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   build:
@@ -37,7 +37,7 @@ jobs:
           depth: 1
 
   docker:
-    needs: test
+    needs: security
     runs-on: ubuntu-latest
 
     steps:
